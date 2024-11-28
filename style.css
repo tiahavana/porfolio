@@ -1,0 +1,451 @@
+/* Style global */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Header */
+.triangle-left-top,
+.triangle-right-top {
+  position: absolute;
+  top: 0px; /* Décale légèrement les triangles vers le bas */
+  width: 5%; /* Chaque triangle prend la moitié de la largeur */
+  height: 50px; /* Hauteur des triangles */
+}
+
+/* Triangle gauche (inversé) */
+.triangle-left-top {
+  left: 0;
+  background: #121212; /* Couleur synchronisée avec la section suivante */
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+/* Triangle droit (inversé) */
+.triangle-right-top {
+  right: 0;
+  background: #121212; /* Couleur synchronisée avec la section suivante */
+  clip-path: polygon(100% 0, 100% 100%, 0 0); /* Triangle orienté vers le haut (inversé) */
+}
+header {
+  position: relative;
+  background: #4a90e2; /* Couleur principale */
+  color: white;
+  background-color: #535a66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
+  max-height: 200vh;
+}
+header .arrow-container {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%); /* Centre la flèche */
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 60px solid #535a66; /* Couleur de la flèche */
+  z-index: 1;
+}
+.bio {
+  display: flex;             /* Utilise flexbox pour aligner les éléments en ligne */
+  align-items: flex-start;   /* Aligne les éléments au sommet */
+  gap: 20px;                 /* Espace entre les images et le texte */
+}
+
+.bio-img-container {
+  display: flex;             /* Aligne les images côte à côte */
+  flex-direction: column;    /* Positionne les images l'une sous l'autre */
+  gap: 10px;                 /* Ajoute un écart entre les images */
+}
+
+.bio-img {
+  width: 100px;              /* Taille de l'image de profil */
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.linkedin-img {
+  width: 100px;              /* Taille de l'image LinkedIn */
+  height: auto;              /* Maintient les proportions */
+  border-radius: 0 0 10px 10px;
+}
+
+.bio-text {
+  margin-top: 0;
+  text-align: justify;
+  flex: 1;                   /* Le texte occupe tout l'espace restant */
+  align-self: flex-start;    /* Aligne le texte au même niveau que les images */
+  max-width: 500px;          /* Limite la largeur du texte */
+}
+
+
+.triangle-left,
+.triangle-right {
+  position: absolute;
+  bottom: 60px; /* Décale légèrement les triangles vers le bas */
+  width: 5%; /* Chaque triangle prend la moitié de la largeur */
+  height: 50px; /* Hauteur des triangles */
+}
+
+/* Triangle gauche (inversé) */
+.triangle-left {
+  left: 0;
+  background: #121212; /* Couleur synchronisée avec la section suivante */
+  clip-path: polygon(0 0, 100% 100%, 0 100%); /* Triangle orienté vers le haut (inversé) */
+}
+
+/* Triangle droit (inversé) */
+.triangle-right {
+  right: 0;
+  background: #121212; /* Couleur synchronisée avec la section suivante */
+  clip-path: polygon(100% 0, 0 100%, 100% 100%); /* Triangle orienté vers le haut (inversé) */
+}
+
+header .rectangle-container{
+   position: absolute;
+  bottom: 0px; /* Ajustez pour que le rectangle soit juste sous la flèche */
+  left: 0;
+  width: 100%; /* Prend la largeur de l'écran */
+  height: 60px; /* Hauteur du rectangle égale à celle de la flèche */
+  background-color: #121212; /* Couleur du rectangle */
+  z-index: 0; /* Place le rectangle sous la flèche */
+}
+.header-content h1 {
+  font-size: 4em;
+  color: #00ff99; /* Accent néon */
+  margin-top: 20px;
+}
+
+.header-content p {
+  font-size: 1.2em;
+  color: #aaa;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #00ff99;
+  text-decoration: none;
+  color: #947634;
+  padding: 5px 20px;
+  clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%, 0 0);
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #06bf75;
+}
+
+
+/* Portfolio Slider */
+.portfolio-slider {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  position: relative;
+  height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slider-container{
+
+  background-color: black;
+  border-top: 0.5px solid; #535a66;
+  border-bottom:0.5px solid; #535a66;
+  padding-bottom: 80px;
+}
+
+.slider {
+  display: flex;
+  width: 50%;
+  transition: transform 2s ease-in-out; 
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  margin:0 auto;
+}
+
+.video-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assure que la vidéo couvre toute la zone */
+}
+
+/* Slider Controls */
+.slider-controls {
+  position: relative;
+  top: 5em;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+ /* Texte sur la vidéo */
+  .video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow:  2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 1; /* Placer le texte au-dessus de la vidéo */
+  }
+
+  .video-overlay h2 {
+    font-size: 2em;
+    margin: 0;
+  }
+
+  .video-overlay p {
+    font-size: 1.2em;
+  }
+
+
+/*CONTACT*/
+#contact {
+  background-color: #535a66;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #1c1c1c;
+  text-align: center;
+  padding: 5px;
+}
+
+footer p {
+  color: #bbb;
+  margin: 0;
+}
+/* Styles généraux pour les mobiles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .header-content h1 {
+    font-size: 2.5em; /* Taille réduite pour les petits écrans */
+  }
+
+  .header-content p {
+    font-size: 1em; /* Réduction de la taille */
+  }
+
+  .bio {
+    flex-direction: column; /* Images et texte empilés */
+    align-items: center; /* Centrer le contenu */
+    text-align: center;
+  }
+
+  .bio-img {
+    width: 80px; /* Taille réduite de l'image */
+  }
+
+  .linkedin-img {
+    width: 80px;
+  }
+
+  .bio-text {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .btn-cta {
+    font-size: 0.8rem;
+    padding: 5px 15px;
+  }
+
+  .portfolio-slider {
+    height: auto; /* Ajuste la hauteur pour les vidéos */
+  }
+
+  .slider {
+    width: 90%; /* Occupe la majorité de l'espace écran */
+  }
+
+  .video-slide {
+    object-fit: contain; /* Ajuste l'affichage des vidéos pour éviter de couper */
+  }
+
+  .slider-controls {
+  }
+
+  section#contact {
+    padding: 20px 10px;
+  }
+
+  section#contact h2 {
+    font-size: 1.5em;
+  }
+
+  section#contact form {
+    width: 100%; /* Utilisation maximale de l'écran */
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-group label {
+    font-size: 0.9em;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+  }
+}
+
+/* Styles spécifiques pour très petits écrans */
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 2em;
+  }
+
+  .header-content p {
+    font-size: 0.9em;
+  }
+
+  .btn-cta {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .bio-img {
+    width: 60px;
+  }
+
+  .linkedin-img {
+    width: 60px;
+  }
+
+  .video-slide {
+    width: 100%;
+    height: auto; /* Ajuste la hauteur automatiquement */
+  }
+
+  .slider-controls button {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+}
+/* Version mobile : les vidéos se placent en haut et bas */
+@media screen and (max-width: 768px) {
+  .slider {
+    flex-direction: column; /* Change l'orientation du slider pour être une colonne */
+    width: 100%; /* Occupe toute la largeur */
+  }
+
+  .slide {
+    width: 100%; /* Chaque slide occupe toute la largeur du conteneur */
+    margin-bottom: 20px; /* Espace entre les slides */
+  }
+
+  .video-slide {
+    width: 100%; /* Les vidéos occupent toute la largeur de chaque slide */
+    height: auto; /* La hauteur s'adapte à la largeur */
+    object-fit: cover; /* Assure que la vidéo couvre bien l'espace sans déformation */
+  }
+
+  .slider-controls {
+    /* Réduisez ou modifiez l'alignement des boutons de contrôle si nécessaire */
+    position: relative;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}

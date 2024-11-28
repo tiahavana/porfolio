@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - RAZAKANDRAINY Lanjamarina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="triangle-left-top"></div>
+    <div class="triangle-right-top"></div>
+    <div class="header-content">
+      <h1>Mon Portfolio</h1>
+      <p style="color: #b0965d;"><b>RAZAKANDRAINY Lanjamarina</b></p>
+      <div class="bio">
+          <div class="bio-img-container">
+            <figure style="margin:0;">      
+              <img src="porfolio.png" alt="Profil" class="bio-img">
+            </figure>
+            <figure style="margin: 0;">  
+              <figcaption style="margin:0; font-size: 0.6em; letter-spacing: 2.7px;">Profil LinkedIn</figcaption>
+              <a href="https://www.linkedin.com/lanjarz"><img src="LinkedIn-1024.jpeg" alt="LinkedIn" class="linkedin-img"></a>
+            </figure>
+          </div>
+          <p class="bio-text">
+            Spécialisé en réseaux et systèmes, j’ai acquis une solide expertise dans le domaines de la sécurité et l’optimisation des réseaux. Parallèlement, mes compétences en développement web incluent la maîtrise de technologies telles que PHP, MySQL, HTML, CSS, JavaScript, ainsi que des frameworks comme Laravel et Vue.js. Mon approche polyvalente me permet de concevoir des solutions efficaces alliant sécurité, performance et expérience utilisateuren terme de développement et gestion d’infrastructure.
+          </p>
+      </div>
+
+      <a href="#services" class="btn-cta">Découvrir plus.</a>
+    </div>
+     <div class="arrow-container"></div> <!-- Conteneur de la flèche -->
+     <div class="triangle-left"></div>
+     <div class="triangle-right"></div>
+     <div class="rectangle-container"></div>
+  </header>
+
+  <section class="portfolio-slider" id="services">
+   <div class="slider-container"> 
+     <div class="slider-controls">
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <h1 style="text-align: center;"></h1>
+
+    <!--slider-1-->
+
+    <div class="slider" id="slider-1">
+      <div class="slide">
+        <video class="video-slide" autoplay muted loop>
+          <source src="video1.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo MP4.
+        </video>
+         <!-- Texte sur la vidéo -->
+        <div class="video-overlay">
+          <h2>Ecommerce</h2>
+        </div>
+      </div>
+      <div class="slide">
+        <video class="video-slide" autoplay muted loop>
+          <source src="video2.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo MP4.
+        </video>
+         <!-- Texte sur la vidéo -->
+        <div class="video-overlay">
+          <h2>Streaming</h2>
+        </div>
+      </div>
+    </div>
+
+     <!--slider-2-->
+
+    <div class="slider" id="slider-2">      
+      <div class="slide">
+        <video class="video-slide" autoplay muted loop>
+          <source src="sysnet.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo MP4.
+        </video>
+         <!-- Texte sur la vidéo -->
+        <div class="video-overlay">
+          <h2>Networking <br>&<br> security</h2>
+        </div>
+      </div>
+      <div class="slide">
+        <video class="video-slide" autoplay muted loop>
+          <source src="webmaster.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo MP4.
+        </video>
+         <!-- Texte sur la vidéo -->
+        <div class="video-overlay">
+          <h2>Webmastering</h2>
+        </div>
+      </div>
+    </div>
+   </div> 
+   
+    
+  </section>
+  <section id="contact">
+    <h2>Contactez-moi</h2>
+    <p>N'hésitez pas à me contacter pour toute question ou collaboration.</p>
+    <form action="https://formspree.io/f/xkgnqevr" method="POST">
+          <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Mon Portfolio | Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
