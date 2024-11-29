@@ -2,7 +2,7 @@ let currentIndex = 0;
 const sliders = document.querySelectorAll('.slider');
 const btnCTA = document.querySelector('.btn-cta');
 const targetSection = document.querySelector('#services'); // Sélectionne la section avec l'ID 'services'
-const titles = ["Développement et gestion de projet Web", "Systemes et reseautage informatique", "Blog et Journal"]; // Titres correspondants
+const titles = ["Dev Web", "SysNet", "Blog et Journal"]; // Titres correspondants
 const totalSliders = sliders.length;
 const titleElement = document.querySelector('.slider-container h1'); // Le titre à changer
 
